@@ -2,10 +2,9 @@
 | ${flag} | UA |
 | ${country_code} | +380 |
 | ${number} | 9999999 |
-| ${RESOURCE} | web_ui_resources |
 
 *** Settings ***
-| Resource | web_ui_resources/keywords.txt 
+| Resource | ../web_ui_resources/keywords.txt 
 
 *** Test Cases ***
 | Compose Message Test

@@ -1,0 +1,111 @@
+*** Variables ***
+| ${BROWSER} | chrome
+
+*** Settings ***
+| Library | BuiltIn |
+| Resource | selenium_resources/selenium_resources.txt |
+
+*** Keywords ***
+| Setup Suite Sanity Registration
+| | General Set Screenshot Directory
+| | Given User Opened AUT
+| | General Maximize Browser Window
+
+| Teardown Suite Sanity Registration
+| | General Close All Browsers
+
+| Teardown Test Sanity Regression
+| | General Reload Page 
+
+| Given User Opened AUT
+| | General Open AUT
+| | Login Wait Until Is Visible
+| | General Capture Screenshot
+
+| Given User Is On LOGIN Screen
+| | Login Wait Until Is Visible
+| | General Capture Screenshot
+
+| Then User Verifies That CONTINUE Button Is Disabled On LOGIN Screen
+| | Login CONTINUE Button Should Be Disabled
+| | General Capture Screenshot
+
+| Then User Verifies That CONTINUE Button Is Enabled
+| | Login CONTINUE Button Should Be Enabled
+| | General Capture Screenshot
+
+| When User Types Into NUMBER HOLDER Input
+| | [Arguments] | ${number}
+| | Login NUMBER HOLDER type | ${number}
+| | General Capture Screenshot
+
+| And User Clicks On CONTINUE Button On LOGIN Screen
+| | Login CONTINUE Button Click
+| | General Capture Screenshot
+
+| Then User Verifies That ACTIVATION Screen Is Displayed
+| | Activation Should Be Visible
+| | General Capture Screenshot
+
+| Then User Verifies That CONTINUE Button Is Disabled On ACTIVATION Screen
+| | Activation CONTINUE Button Should Be Disabled
+| | General Capture Screenshot
+
+| And User Types Into ACTIVATION CODE Input 
+| | [Arguments] | ${activation_code}
+| | Activation CODE Input Type | ${activation_code}
+| | General Capture Screenshot
+
+| Then User Verifies That CONTINUE Button Is Enabled On ACTIVATION Screen
+| | Activation CONTINUE Button Should Be Enabled
+| | General Capture Screenshot
+
+| Then User Verifies That Error Message Please Check The Number Is Displayed
+| | General Error Message Should Be Displayed | Invalid phone number.
+| | General Capture Screenshot
+
+| And User Clicks On CONTINUE Button On ACTIVATION Screen
+| | Activation CONTINUE Button Click
+| | General Capture Screenshot
+
+| Then User Verifies That Error Message Incorrect Activation Code Is Displayed
+| | Activation Error Message Incorrect Activation Code Should Be Visible
+| | General Capture Screenshot
+
+| And User Clicks On NO CODE Button On ACTIVATION Screen
+| | Activation NO CODE Button Click
+| | General Capture Screenshot
+
+| Then User Verifies That Login Screen Is Displayed
+| | Login Wait Until Is Visible
+| | General Capture Screenshot
+
+| Then User Verifies That Local Country Flag Is Displayed
+| | [Arguments] | ${flag}
+| | Login Country Flag Should Be Visible | ${flag}
+| | General Capture Screenshot
+
+
+
+| When User Logins
+| | Login
+
+| And User Opens Dialer
+| | Header Container Click Keypad Button
+
+| Then User Verifies That Flag Is Present
+| | [Arguments] | ${flag}
+| | Dialer Top Bar Check That Flag Is Present | ${flag}
+
+| When User Types Into Number Placeholder
+| | [Arguments] | ${country_code} | ${number}
+| | Dialer Top Bar Type Number | ${country_code} | ${number}
+
+| And User Clicks Compose Message Button
+| | Dialer Footer Click Compose Message Button
+
+| Then User Verifies That Message Header Is
+| | [Arguments] | ${country_code} | ${number}
+| | Wait Until Element Contains | xpath=//div[@class='name']/span[@data-bind='text: userName'] | ${country_code}${number}
+| | Element Should Contain | xpath=//div[@class='name']/span[@data-bind='text: userName'] | ${country_code}${number}
+

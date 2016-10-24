@@ -1,0 +1,109 @@
+*** Variables ***
+| ${BROWSER} | chrome
+
+*** Settings ***
+| Library | Selenium2Library | implicit_wait=5
+| Library | BuiltIn
+| Library | String
+
+*** Keywords ***
+| General Maximize Browser Window
+| | Maximize Browser Window
+
+| General Set Screenshot Directory
+| | Set Screenshot Directory | selenium_screenshots
+
+| General Capture Screenshot
+| | Capture Page Screenshot
+
+| General Open AUT
+| | Open browser | https://fringkandy.kandy.io/ | ${BROWSER}
+
+| General Reload Page 
+| | Reload Page 
+ 
+| General Error Message Should Be Displayed
+| | [Arguments] | ${error_message}
+| | Wait Until Element Is Visible | //div[@class='error-message visible' and contains(text(), '${error_message}')]
+
+| General Close All Browsers
+| | Close All Browsers
+ 
+| Login
+| | Wait Until Page Contains Element | xpath=//div[@class='current-flag']/div[contains(@class, 'flag flags')]
+| | Execute Javascript | app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");
+| | Click Element | xpath=//button[text()='No']
+
+| Login Wait Until Is Visible
+| | Wait Until Element Is Visible | xpath=//p[text()='Use your mobile phone number to log in'] | 10
+| | Wait Until Element Is Visible | xpath=//div[contains(@class, 'current-flag')]
+
+| Login CONTINUE Button Should Be Disabled
+| | Wait Until Element Is Visible | xpath=//button[text()='Continue' and @class='login-main-button' and @disabled]
+| | Page Should Not Contain Element | xpath=//button[text()='Continue' and @class='login-main-button' and not(@disabled)]
+
+| Login CONTINUE Button Should Be Enabled
+| | Wait Until Element Is Visible | xpath=//button[text()='Continue' and @class='login-main-button' and not(@disabled)]
+| | Page Should Not Contain Element | xpath=//button[text()='Continue' and @class='login-main-button' and @disabled]
+
+| Login CONTINUE Button Click
+| | Click Element | xpath=//button[text()='Continue' and @class='login-main-button']
+
+| Login NUMBER HOLDER type
+| | [Arguments] | ${number}
+| | Input Text | xpath=//div[@class='number-holder enabled']/input | ${number}
+
+| Activation Should Be Visible
+| | Wait Until Element Is Visible | xpath=//h2[text()='Insert activation code to confirm your ID']
+
+| Activation CONTINUE Button Should Be Disabled
+| | Wait Until Element Is Visible | xpath=//button[text()='Continue' and contains(@data-bind, 'ValidationCode') and @disabled]
+| | Page Should Not Contain Element | xpath=//button[text()='Continue' and contains(@data-bind, 'ValidationCode') and not(@disabled)]
+
+| Activation CONTINUE Button Should Be Enabled
+| | Wait Until Element Is Visible | xpath=//button[text()='Continue' and contains(@data-bind, 'ValidationCode') and not(@disabled)]
+| | Page Should Not Contain Element | xpath=//button[text()='Continue' and contains(@data-bind, 'ValidationCode') and @disabled]
+
+| Activation CONTINUE Button Click
+| | Wait Until Element Is Visible | xpath=//form[contains(@data-bind, 'sendValidationCode')]/button[text()='Continue']
+| | Click Element | xpath=//form[contains(@data-bind, 'sendValidationCode')]/button[text()='Continue']
+
+| Activation NO CODE Button Click
+| | Wait Until Element Is Visible | xpath=//form[contains(@data-bind, 'sendValidationCode')]/button[text()='No code?']
+| | Click Element | xpath=//form[contains(@data-bind, 'sendValidationCode')]/button[text()='No code?']
+
+| Activation CODE Input Type |
+| | [Arguments] | ${activation_code}
+| | Wait Until Element Is Visible | xpath=//div[@class='validation-number']/input[1]
+| | :FOR | ${INDEX} | IN RANGE | 0 | 4
+| | \ | Log | huj2
+| | \ | Input Text | xpath=//div[@class='validation-number']/input[${INDEX+1}] | ${activation_code[${INDEX}]} 
+
+| Activation Error Message Incorrect Activation Code Should Be Visible
+| | Wait Until Element Is Visible | xpath=//form[contains(@data-bind, 'sendValidationCode')]/div[contains(text(), 'Incorrect activation code')]
+
+| Login Country Flag Should Be Visible
+| | [Arguments] | ${flag}
+| | Page Should Contain Element | xpath=//div[@class = 'flag flags ${flag}']
+
+
+//div[@class = 'flag flags UA')]
+
+
+| Header Container Click Keypad Button
+| | Click Element | xpath=//button[@title='Keypad']
+
+| Dialer Top Bar Check That Flag Is Present
+| | [Arguments] | ${flag}
+| | Wait Until Page Contains Element | xpath=//div[@class='current-flag']/div[@class='flag flags ${flag}']
+
+| Dialer Top Bar Type Number
+| | [Arguments] | ${country_code} | ${number}
+| | Input Text | //div[@class='number-holder enabled']/input | ${country_code} ${number}
+
+| Dialer Footer Click Compose Message Button
+| | Click Element | xpath=//button[@class='chat-button']
+
+
+*** comments ***
+| | Wait Until Element Is Visible | xpath=//div[contains(@class, 'flag flags')] | 10

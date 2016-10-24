@@ -1,0 +1,67 @@
+*** Variables ***
+| ${flag} | UA |
+| ${country_code} | +380 |
+| ${valid_number} | 933333333 |
+| ${invalid_number} | 1111222233334444 |
+| @{fake_activation_code} | 6 | 7 | 8 | 9 |
+| ${RESOURCE} | web_ui_resources |
+
+*** Settings ***
+| Resource | ../resources/web_ui_resources/keywords.txt 
+| Suite setup | Setup Suite Sanity Registration
+| Suite teardown | Teardown Suite Sanity Registration
+| Test teardown | Teardown Test Sanity Regression
+
+*** Test Cases ***
+| Check CONTINUE button is disabled
+| | Given User Is On LOGIN Screen
+| | Then User Verifies That CONTINUE Button Is Disabled On LOGIN Screen
+
+| Check CONTINUE button is enabled
+| | Given User Is On LOGIN Screen
+| | When User Types Into NUMBER HOLDER Input | ${country_code}${valid_number} |
+| | Then User Verifies That CONTINUE Button Is Enabled
+
+| Сheck error message about wrong mobile number
+| | Given User Is On LOGIN Screen
+| | When User Types Into NUMBER HOLDER Input | ${country_code}${invalid_number}
+| | And User Clicks On CONTINUE Button On LOGIN Screen
+| | Then User Verifies That Error Message Please Check The Number Is Displayed
+
+| Check ACTIVATION screen
+| | Given User Is On LOGIN Screen
+| | When User Types Into NUMBER HOLDER Input | ${country_code}${valid_number}
+| | And User Clicks On CONTINUE Button On LOGIN Screen
+| | Then User Verifies That ACTIVATION Screen Is Displayed
+
+| Check CONTINUE button is disabled on activation screen
+| | Given User Is On LOGIN Screen
+| | When User Types Into NUMBER HOLDER Input | ${country_code}${valid_number}
+| | And User Clicks On CONTINUE Button On LOGIN Screen
+| | Then User Verifies That CONTINUE Button Is Disabled On ACTIVATION Screen
+
+| Check CONTINUE button is enabled on activation screen
+| | Given User Is On LOGIN Screen
+| | When User Types Into NUMBER HOLDER Input | ${country_code}${valid_number}
+| | And User Clicks On CONTINUE Button On LOGIN Screen
+| | And User Types Into ACTIVATION CODE Input | ${fake_activation_code}
+| | Then User Verifies That CONTINUE Button Is Enabled On ACTIVATION Screen
+
+| Сheck error message about wrong activation code
+| | Given User Is On LOGIN Screen
+| | When User Types Into NUMBER HOLDER Input | ${country_code}${valid_number}
+| | And User Clicks On CONTINUE Button On LOGIN Screen
+| | And User Types Into ACTIVATION CODE Input | ${fake_activation_code}
+| | And User Clicks On CONTINUE Button On ACTIVATION Screen
+| | Then User Verifies That Error Message Incorrect Activation Code Is Displayed
+
+| Сheck NO CODE button is workable.
+| | Given User Is On LOGIN Screen
+| | When User Types Into NUMBER HOLDER Input | ${country_code}${valid_number}
+| | And User Clicks On CONTINUE Button On LOGIN Screen
+| | And User Clicks On NO CODE Button On ACTIVATION Screen
+| | Then User Verifies That Login Screen Is Displayed
+
+| Check local country code and flag is detected
+| | Given User Is On LOGIN Screen
+| | Then User Verifies That Local Country Flag Is Displayed | ${flag}
