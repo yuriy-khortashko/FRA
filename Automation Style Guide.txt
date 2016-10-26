@@ -1,0 +1,35 @@
+
+
+
+## General Approach
+### Framework consists of 3 layers:
+ --Human readable BDD style tests
+ --Logic implementation (no low level elements, like selenium selectors, etc.)
+ --Low level realization (accessing selenium elements by locators, etc.)
+
+## Naming conventions
+### Standard element names
+--  View (registration view, activation view)
+--  Screen (main screen, )
+--  Button (continue button, country selection button)
+--  Input (number input)
+--  Popup (notification pop-up)
+--  Tab 
+--  Placeholder (No facorite contact yet, etc.)
+--  Dropdown
+--  Switcher
+--  Container
+--  Item (contact book)
+--  Icon
+
+### Page Element Names (caps)
+--  REGISTRATION View
+--  ACTIVATION View
+--  CONTINUE Button 
+
+
+### Element Inside Element
+--  REGISTRATION View CONTINUE Button 
+- If few elements layers are present, only lowest two should be used view - tab - tab - contact
+CONTACTS View ADDRESSBOOK Tab ALL Tab 759FRING Item  -- WRONG
+ALL Tab 759FRING Item -- CORRECT
