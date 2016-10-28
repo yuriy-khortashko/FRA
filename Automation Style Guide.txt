@@ -14,7 +14,7 @@
 --  Button (continue button, country selection button)
 --  Input (number input)
 --  Popup (notification pop-up)
---  Tab 
+--  Tab
 --  Placeholder (No facorite contact yet, etc.)
 --  Dropdown
 --  Switcher
@@ -25,11 +25,11 @@
 ### Page Element Names (caps)
 --  REGISTRATION View
 --  ACTIVATION View
---  CONTINUE Button 
+--  CONTINUE Button
 
 
 ### Element Inside Element
---  REGISTRATION View CONTINUE Button 
+--  REGISTRATION View CONTINUE Button
 - If few elements layers are present, only lowest two should be used view - tab - tab - contact
 CONTACTS View ADDRESSBOOK Tab ALL Tab 759FRING Item  -- WRONG
 ALL Tab 759FRING Item -- CORRECT

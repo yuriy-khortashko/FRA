@@ -6,16 +6,32 @@
 | Resource | selenium_resources/selenium_resources.txt |
 
 *** Keywords ***
-| Setup Suite Sanity Registration
+| Setup Suite Sanity
 | | General Set Screenshot Directory
 | | Given User Opened AUT
 | | General Maximize Browser Window
+
+
+| Setup Suite Sanity Registration
+|  | Setup Suite Sanity
+
+| Setup Suite Sanity Settings
+|  | Setup Suite Sanity
 
 | Teardown Suite Sanity Registration
 | | General Close All Browsers
 
 | Teardown Test Sanity Regression
-| | General Reload Page 
+| | General Reload Page
+
+| Teardown Test Sanity Settings
+| | General Close All Browsers
+
+|  Setup Test Sanity Settings
+| | General Set Screenshot Directory
+| | Given User Opened AUT
+| | General Maximize Browser Window
+| | Login
 
 | Given User Opened AUT
 | | General Open AUT
@@ -51,7 +67,7 @@
 | | Activation CONTINUE Button Should Be Disabled
 | | General Capture Screenshot
 
-| And User Types Into ACTIVATION CODE Input 
+| And User Types Into ACTIVATION CODE Input
 | | [Arguments] | ${activation_code}
 | | Activation CODE Input Type | ${activation_code}
 | | General Capture Screenshot
@@ -86,7 +102,6 @@
 | | General Capture Screenshot
 
 
-
 | When User Logins
 | | Login
 
@@ -109,3 +124,66 @@
 | | Wait Until Element Contains | xpath=//div[@class='name']/span[@data-bind='text: userName'] | ${country_code}${number}
 | | Element Should Contain | xpath=//div[@class='name']/span[@data-bind='text: userName'] | ${country_code}${number}
 
+
+
+
+
+
+
+
+| When User Opens MENU
+| | Header Left Container Click MENU button
+| | General Capture Screenshot
+
+| And GET CREDIT is enable
+| | Wait Until Element Is Visible | xpath=//*[@id="app_actions"]/ul/li[6]
+
+| And User Opens GET CREDIT
+| | Dropdown Click GET CREDIT button
+
+| And check GET CREDIT page
+| | Wait Until Element Is Visible | css=div.middlebox
+
+| And go BACK
+| | Header Bar Click BACK button
+
+| Then check LANDING page
+| | Main page Check PREVIOUS screen
+| | General Capture Screenshot
+
+
+
+
+
+
+| And ABOUT is enable
+| | Wait Until Element Is Visible	 | xpath=//*[@id="app_actions"]/ul/li[7]
+| | General Capture Screenshot
+
+| And User Opens ABOUT popup
+| | Dropdown Click ABOUT button
+| | General Capture Screenshot
+
+| And User Closes ABOUT popup
+| | Popup Click OK button
+
+
+
+
+
+
+
+| And LOGOUT is enable
+| | Wait Until Element Is Visible | xpath=//*[@id="app_actions"]/ul/li[8]
+
+| And User Opens LOGOUT popup
+| | Dropdown Click LOGOUT button
+| | General Capture Screenshot
+
+| And User performs LOGOUT
+| | Popup Click LOGOUT button
+| | General Capture Screenshot
+
+| Then check REGISTRATION view
+| | Wait Until Element Is Visible | xpath=//*[@id="registrationView"]
+| | General Capture Screenshot

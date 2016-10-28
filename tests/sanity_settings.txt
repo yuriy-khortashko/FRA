@@ -1,0 +1,23 @@
+*** Variables ***
+| ${RESOURCE} | web_ui_resources |
+
+*** Settings ***
+| Resource | ../resources/web_ui_resources/keywords.txt
+| Test teardown | Teardown Test Sanity Settings
+| Test setup |  Setup Test Sanity Settings
+
+
+*** Test Cases ***
+| Check About POPUP
+| | When User Opens MENU
+| | And ABOUT is enable
+| | And User Opens ABOUT popup
+| | And User Closes ABOUT popup
+| | Then check LANDING page
+
+| Check Logout functionality
+| | When User Opens MENU
+| | And LOGOUT is enable
+| | And User Opens LOGOUT popup
+| | And User performs LOGOUT
+| | Then check REGISTRATION view

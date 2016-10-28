@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20161028 14:01:55.746" generator="Robot 3.0 (Python 2.7.12 on win32)">
+<suite source="D:\Projects\FRA\tests\sanity_settings.txt" id="s1" name="Sanity Settings">
+<test id="s1-t1" name="Check About POPUP">
+<kw type="setup" name="Setup Test Sanity Settings" library="keywords">
+<kw name="General Set Screenshot Directory" library="selenium_resources">
+<kw name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the root output directory for captured screenshots.</doc>
+<arguments>
+<arg>selenium_screenshots</arg>
+</arguments>
+<status status="PASS" endtime="20161028 14:01:55.914" starttime="20161028 14:01:55.913"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:01:55.914" starttime="20161028 14:01:55.913"></status>
+</kw>
+<kw name="Given User Opened AUT" library="keywords">
+<kw name="General Open AUT" library="selenium_resources">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://fringkandy.kandy.io/</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20161028 14:01:55.915" level="INFO">Opening browser 'chrome' to base url 'https://fringkandy.kandy.io/'</msg>
+<status status="PASS" endtime="20161028 14:02:09.320" starttime="20161028 14:01:55.915"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:09.320" starttime="20161028 14:01:55.914"></status>
+</kw>
+<kw name="Login Wait Until Is Visible" library="selenium_resources">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//p[text()='Use your mobile phone number to log in']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20161028 14:02:14.552" starttime="20161028 14:02:09.321"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//div[contains(@class, 'current-flag')]</arg>
+</arguments>
+<status status="PASS" endtime="20161028 14:02:14.582" starttime="20161028 14:02:14.553"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:14.582" starttime="20161028 14:02:09.320"></status>
+</kw>
+<kw name="General Capture Screenshot" library="selenium_resources">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161028 14:02:15.755" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-1.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161028 14:02:15.755" starttime="20161028 14:02:14.583"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:15.755" starttime="20161028 14:02:14.583"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:15.755" starttime="20161028 14:01:55.914"></status>
+</kw>
+<kw name="General Maximize Browser Window" library="selenium_resources">
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20161028 14:02:15.791" starttime="20161028 14:02:15.755"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:15.791" starttime="20161028 14:02:15.755"></status>
+</kw>
+<kw name="Login" library="selenium_resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//div[@class='current-flag']/div[contains(@class, 'flag flags')]</arg>
+</arguments>
+<status status="PASS" endtime="20161028 14:02:15.813" starttime="20161028 14:02:15.792"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</arg>
+</arguments>
+<msg timestamp="20161028 14:02:15.813" level="INFO">Executing JavaScript:
+app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</msg>
+<status status="PASS" endtime="20161028 14:02:15.822" starttime="20161028 14:02:15.813"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//button[text()='No']</arg>
+</arguments>
+<msg timestamp="20161028 14:02:15.823" level="INFO">Clicking element 'xpath=//button[text()='No']'.</msg>
+<status status="PASS" endtime="20161028 14:02:17.045" starttime="20161028 14:02:15.823"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.046" starttime="20161028 14:02:15.792"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.046" starttime="20161028 14:01:55.913"></status>
+</kw>
+<kw name="When User Opens MENU" library="keywords">
+<kw name="Header Left Container Click MENU button" library="selenium_resources">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="contactsListView"]/header/nav/div/button[2]</arg>
+</arguments>
+<msg timestamp="20161028 14:02:17.047" level="INFO">Clicking element 'xpath=//*[@id="contactsListView"]/header/nav/div/button[2]'.</msg>
+<status status="PASS" endtime="20161028 14:02:17.095" starttime="20161028 14:02:17.047"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.095" starttime="20161028 14:02:17.046"></status>
+</kw>
+<kw name="General Capture Screenshot" library="selenium_resources">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161028 14:02:17.257" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-2.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161028 14:02:17.257" starttime="20161028 14:02:17.096"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.258" starttime="20161028 14:02:17.095"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.258" starttime="20161028 14:02:17.046"></status>
+</kw>
+<kw name="And ABOUT is enable" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="app_actions"]/ul/li[7]</arg>
+</arguments>
+<status status="PASS" endtime="20161028 14:02:17.290" starttime="20161028 14:02:17.258"></status>
+</kw>
+<kw name="General Capture Screenshot" library="selenium_resources">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161028 14:02:17.443" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-3.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161028 14:02:17.443" starttime="20161028 14:02:17.291"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.443" starttime="20161028 14:02:17.290"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.443" starttime="20161028 14:02:17.258"></status>
+</kw>
+<kw name="And User Opens ABOUT popup" library="keywords">
+<kw name="Dropdown Click ABOUT button" library="selenium_resources">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app_actions"]/ul/li[7]</arg>
+</arguments>
+<msg timestamp="20161028 14:02:17.444" level="INFO">Clicking element 'xpath=//*[@id="app_actions"]/ul/li[7]'.</msg>
+<status status="PASS" endtime="20161028 14:02:17.487" starttime="20161028 14:02:17.444"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.488" starttime="20161028 14:02:17.444"></status>
+</kw>
+<kw name="General Capture Screenshot" library="selenium_resources">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161028 14:02:17.624" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-4.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161028 14:02:17.625" starttime="20161028 14:02:17.488"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.625" starttime="20161028 14:02:17.488"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.625" starttime="20161028 14:02:17.444"></status>
+</kw>
+<kw name="And User Closes ABOUT popup" library="keywords">
+<kw name="Popup Click OK button" library="selenium_resources">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//button[text()='OK']</arg>
+</arguments>
+<msg timestamp="20161028 14:02:17.627" level="INFO">Clicking element 'xpath=//button[text()='OK']'.</msg>
+<status status="PASS" endtime="20161028 14:02:17.694" starttime="20161028 14:02:17.627"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.694" starttime="20161028 14:02:17.626"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.694" starttime="20161028 14:02:17.626"></status>
+</kw>
+<kw name="Then check LANDING page" library="keywords">
+<kw name="Main page Check PREVIOUS screen" library="selenium_resources">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="landingPageView"]</arg>
+</arguments>
+<msg timestamp="20161028 14:02:17.728" level="INFO">Current page contains element 'xpath=//*[@id="landingPageView"]'.</msg>
+<status status="PASS" endtime="20161028 14:02:17.729" starttime="20161028 14:02:17.695"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.729" starttime="20161028 14:02:17.695"></status>
+</kw>
+<kw name="General Capture Screenshot" library="selenium_resources">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161028 14:02:17.876" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-5.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161028 14:02:17.876" starttime="20161028 14:02:17.729"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.876" starttime="20161028 14:02:17.729"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:17.876" starttime="20161028 14:02:17.694"></status>
+</kw>
+<kw type="teardown" name="Teardown Test Sanity Settings" library="keywords">
+<kw name="General Close All Browsers" library="selenium_resources">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20161028 14:02:22.247" starttime="20161028 14:02:17.877"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:22.247" starttime="20161028 14:02:17.877"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:22.247" starttime="20161028 14:02:17.876"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:22.248" critical="yes" starttime="20161028 14:01:55.911"></status>
+</test>
+<test id="s1-t2" name="Check Logout functionality">
+<kw type="setup" name="Setup Test Sanity Settings" library="keywords">
+<kw name="General Set Screenshot Directory" library="selenium_resources">
+<kw name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the root output directory for captured screenshots.</doc>
+<arguments>
+<arg>selenium_screenshots</arg>
+</arguments>
+<status status="PASS" endtime="20161028 14:02:22.253" starttime="20161028 14:02:22.253"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:22.253" starttime="20161028 14:02:22.252"></status>
+</kw>
+<kw name="Given User Opened AUT" library="keywords">
+<kw name="General Open AUT" library="selenium_resources">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://fringkandy.kandy.io/</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20161028 14:02:22.254" level="INFO">Opening browser 'chrome' to base url 'https://fringkandy.kandy.io/'</msg>
+<status status="PASS" endtime="20161028 14:02:36.017" starttime="20161028 14:02:22.254"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:36.017" starttime="20161028 14:02:22.254"></status>
+</kw>
+<kw name="Login Wait Until Is Visible" library="selenium_resources">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//p[text()='Use your mobile phone number to log in']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20161028 14:02:41.232" starttime="20161028 14:02:36.018"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//div[contains(@class, 'current-flag')]</arg>
+</arguments>
+<status status="PASS" endtime="20161028 14:02:41.256" starttime="20161028 14:02:41.232"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:41.256" starttime="20161028 14:02:36.018"></status>
+</kw>
+<kw name="General Capture Screenshot" library="selenium_resources">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161028 14:02:42.448" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-6.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161028 14:02:42.448" starttime="20161028 14:02:41.256"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:42.449" starttime="20161028 14:02:41.256"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:42.449" starttime="20161028 14:02:22.253"></status>
+</kw>
+<kw name="General Maximize Browser Window" library="selenium_resources">
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20161028 14:02:42.482" starttime="20161028 14:02:42.449"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:42.482" starttime="20161028 14:02:42.449"></status>
+</kw>
+<kw name="Login" library="selenium_resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//div[@class='current-flag']/div[contains(@class, 'flag flags')]</arg>
+</arguments>
+<status status="PASS" endtime="20161028 14:02:42.500" starttime="20161028 14:02:42.482"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</arg>
+</arguments>
+<msg timestamp="20161028 14:02:42.501" level="INFO">Executing JavaScript:
+app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</msg>
+<status status="PASS" endtime="20161028 14:02:42.512" starttime="20161028 14:02:42.501"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//button[text()='No']</arg>
+</arguments>
+<msg timestamp="20161028 14:02:42.512" level="INFO">Clicking element 'xpath=//button[text()='No']'.</msg>
+<status status="PASS" endtime="20161028 14:02:43.557" starttime="20161028 14:02:42.512"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:43.557" starttime="20161028 14:02:42.482"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:43.557" starttime="20161028 14:02:22.252"></status>
+</kw>
+<kw name="When User Opens MENU" library="keywords">
+<kw name="Header Left Container Click MENU button" library="selenium_resources">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="contactsListView"]/header/nav/div/button[2]</arg>
+</arguments>
+<msg timestamp="20161028 14:02:43.558" level="INFO">Clicking element 'xpath=//*[@id="contactsListView"]/header/nav/div/button[2]'.</msg>
+<status status="PASS" endtime="20161028 14:02:43.622" starttime="20161028 14:02:43.558"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:43.622" starttime="20161028 14:02:43.558"></status>
+</kw>
+<kw name="General Capture Screenshot" library="selenium_resources">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161028 14:02:43.754" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-7.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161028 14:02:43.754" starttime="20161028 14:02:43.623"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:43.754" starttime="20161028 14:02:43.622"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:43.754" starttime="20161028 14:02:43.558"></status>
+</kw>
+<kw name="And LOGOUT is enable" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="app_actions"]/ul/li[8]</arg>
+</arguments>
+<status status="PASS" endtime="20161028 14:02:43.787" starttime="20161028 14:02:43.755"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:43.787" starttime="20161028 14:02:43.755"></status>
+</kw>
+<kw name="And User Opens LOGOUT popup" library="keywords">
+<kw name="Dropdown Click LOGOUT button" library="selenium_resources">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app_actions"]/ul/li[8]</arg>
+</arguments>
+<msg timestamp="20161028 14:02:43.789" level="INFO">Clicking element 'xpath=//*[@id="app_actions"]/ul/li[8]'.</msg>
+<status status="PASS" endtime="20161028 14:02:43.835" starttime="20161028 14:02:43.788"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:43.835" starttime="20161028 14:02:43.788"></status>
+</kw>
+<kw name="General Capture Screenshot" library="selenium_resources">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161028 14:02:43.982" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-8.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161028 14:02:43.982" starttime="20161028 14:02:43.836"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:43.982" starttime="20161028 14:02:43.835"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:43.982" starttime="20161028 14:02:43.788"></status>
+</kw>
+<kw name="And User performs LOGOUT" library="keywords">
+<kw name="Popup Click LOGOUT button" library="selenium_resources">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="dialogs"]/dialog[2]/div/footer/button[2]</arg>
+</arguments>
+<msg timestamp="20161028 14:02:43.983" level="INFO">Clicking element 'xpath=//*[@id="dialogs"]/dialog[2]/div/footer/button[2]'.</msg>
+<status status="PASS" endtime="20161028 14:02:44.048" starttime="20161028 14:02:43.983"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:44.048" starttime="20161028 14:02:43.983"></status>
+</kw>
+<kw name="General Capture Screenshot" library="selenium_resources">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161028 14:02:44.190" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-9.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161028 14:02:44.190" starttime="20161028 14:02:44.049"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:44.190" starttime="20161028 14:02:44.049"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:44.190" starttime="20161028 14:02:43.983"></status>
+</kw>
+<kw name="Then check REGISTRATION view" library="keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="registrationView"]</arg>
+</arguments>
+<status status="PASS" endtime="20161028 14:02:48.936" starttime="20161028 14:02:44.191"></status>
+</kw>
+<kw name="General Capture Screenshot" library="selenium_resources">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161028 14:02:49.059" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-10.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161028 14:02:49.059" starttime="20161028 14:02:48.936"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:49.059" starttime="20161028 14:02:48.936"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:49.060" starttime="20161028 14:02:44.191"></status>
+</kw>
+<kw type="teardown" name="Teardown Test Sanity Settings" library="keywords">
+<kw name="General Close All Browsers" library="selenium_resources">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20161028 14:02:53.621" starttime="20161028 14:02:49.061"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:53.621" starttime="20161028 14:02:49.061"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:53.621" starttime="20161028 14:02:49.060"></status>
+</kw>
+<status status="PASS" endtime="20161028 14:02:53.622" critical="yes" starttime="20161028 14:02:22.251"></status>
+</test>
+<status status="PASS" endtime="20161028 14:02:53.625" starttime="20161028 14:01:55.756"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Sanity Settings" pass="2">Sanity Settings</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

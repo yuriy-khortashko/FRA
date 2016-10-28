@@ -19,16 +19,16 @@
 | General Open AUT
 | | Open browser | https://fringkandy.kandy.io/ | ${BROWSER}
 
-| General Reload Page 
-| | Reload Page 
- 
+| General Reload Page
+| | Reload Page
+
 | General Error Message Should Be Displayed
 | | [Arguments] | ${error_message}
 | | Wait Until Element Is Visible | //div[@class='error-message visible' and contains(text(), '${error_message}')]
 
 | General Close All Browsers
 | | Close All Browsers
- 
+
 | Login
 | | Wait Until Page Contains Element | xpath=//div[@class='current-flag']/div[contains(@class, 'flag flags')]
 | | Execute Javascript | app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");
@@ -77,7 +77,7 @@
 | | Wait Until Element Is Visible | xpath=//div[@class='validation-number']/input[1]
 | | :FOR | ${INDEX} | IN RANGE | 0 | 4
 | | \ | Log | huj2
-| | \ | Input Text | xpath=//div[@class='validation-number']/input[${INDEX+1}] | ${activation_code[${INDEX}]} 
+| | \ | Input Text | xpath=//div[@class='validation-number']/input[${INDEX+1}] | ${activation_code[${INDEX}]}
 
 | Activation Error Message Incorrect Activation Code Should Be Visible
 | | Wait Until Element Is Visible | xpath=//form[contains(@data-bind, 'sendValidationCode')]/div[contains(text(), 'Incorrect activation code')]
@@ -105,5 +105,36 @@
 | | Click Element | xpath=//button[@class='chat-button']
 
 
+| Dropdown Click GET CREDIT button
+| | Click Element | xpath=//*[@id="app_actions"]/ul/li[6]
+
+| Header Bar Click BACK button
+| | Click Element | xpath=//*[@id="getCreditsView"]/header/button
+
+| Main page Check PREVIOUS screen
+| | Page Should Contain Element | xpath=//*[@id="landingPageView"]
+
+| Dropdown Click ABOUT button
+| | Click Element | xpath=//*[@id="app_actions"]/ul/li[7]
+
+| Popup Click OK button
+| | Click Element | xpath=//button[text()='OK']
+
+| Dropdown Click LOGOUT button
+| | Click Element | xpath=//*[@id="app_actions"]/ul/li[8]
+
+| Popup Click LOGOUT button
+| | Click Element | xpath=//*[@id="dialogs"]/dialog[2]/div/footer/button[2]
+
+| Header Left Container Click MENU button
+| | Click Element | xpath=//*[@id="contactsListView"]/header/nav/div/button[2]
+
+
 *** comments ***
 | | Wait Until Element Is Visible | xpath=//div[contains(@class, 'flag flags')] | 10
+
+
+
+
+
+

@@ -7,7 +7,7 @@
 | ${RESOURCE} | web_ui_resources |
 
 *** Settings ***
-| Resource | ../resources/web_ui_resources/keywords.txt 
+| Resource | ../resources/web_ui_resources/keywords.txt
 | Suite setup | Setup Suite Sanity Registration
 | Suite teardown | Teardown Suite Sanity Registration
 | Test teardown | Teardown Test Sanity Regression
