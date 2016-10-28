@@ -3,6 +3,7 @@
 
 *** Settings ***
 | Library | Selenium2Library | implicit_wait=5
+| Library | Selenium2Library | timeout=10
 | Library | BuiltIn
 | Library | String
 
@@ -105,6 +106,10 @@
 | | Click Element | xpath=//button[@class='chat-button']
 
 
+
+| Header Left Container Click MENU button
+| | Click Element | xpath=//*[@id="contactsListView"]/header/nav/div/button[2]
+
 | Dropdown Click GET CREDIT button
 | | Click Element | xpath=//*[@id="app_actions"]/ul/li[6]
 
@@ -126,8 +131,11 @@
 | Popup Click LOGOUT button
 | | Click Element | xpath=//*[@id="dialogs"]/dialog[2]/div/footer/button[2]
 
-| Header Left Container Click MENU button
-| | Click Element | xpath=//*[@id="contactsListView"]/header/nav/div/button[2]
+| Dropdown Click NOTIFICATIONS button
+| | Click Element | xpath=//*[@id="app_actions"]/ul/li[3]
+
+| Popup Click SOUNDS button
+| | Click Element | xpath=//*[@id="dialogs"]/dialog[2]/div/div/div/div/div/div/label[2]/div[1]/div/label
 
 
 *** comments ***

@@ -8,16 +8,24 @@
 
 
 *** Test Cases ***
-| Check About POPUP
+| Check ABOUT popup
 | | When User Opens MENU
 | | And ABOUT is enable
 | | And User Opens ABOUT popup
-| | And User Closes ABOUT popup
+| | And User closes ABOUT popup
 | | Then check LANDING page
 
-| Check Logout functionality
+| Check LOGOUT functionality
 | | When User Opens MENU
 | | And LOGOUT is enable
 | | And User Opens LOGOUT popup
 | | And User performs LOGOUT
 | | Then check REGISTRATION view
+
+| Check NOTIFICATIONS popup
+| | When User Opens MENU
+| | And NOTIFICATIONS is enable
+| | And User Opens NOTIFICATIONS popup
+| | And User Turns off SOUNDS
+| | And User closes NOTIFICATIONS popup
+| | Then check LANDING page

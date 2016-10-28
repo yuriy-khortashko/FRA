@@ -172,7 +172,6 @@
 
 
 
-
 | And LOGOUT is enable
 | | Wait Until Element Is Visible | xpath=//*[@id="app_actions"]/ul/li[8]
 
@@ -186,4 +185,23 @@
 
 | Then check REGISTRATION view
 | | Wait Until Element Is Visible | xpath=//*[@id="registrationView"]
+| | General Capture Screenshot
+
+
+
+
+
+| And NOTIFICATIONS is enable
+| | Wait Until Element Is Visible | xpath=//*[@id="app_actions"]/ul/li[3]
+
+| And User Opens NOTIFICATIONS popup
+| | Dropdown Click NOTIFICATIONS button
+| | General Capture Screenshot
+
+| And User Turns off SOUNDS
+| | Popup Click SOUNDS button
+| | General Capture Screenshot
+
+|  And User closes NOTIFICATIONS popup
+| | Popup Click OK button
 | | General Capture Screenshot
