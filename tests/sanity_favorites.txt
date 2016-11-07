@@ -1,0 +1,30 @@
+*** Variables ***
+| ${RESOURCE} | web_ui_resources |
+
+*** Settings ***
+| Resource | ../resources/web_ui_resources/keywords.txt
+| Test setup | Setup Test Sanity Favorites
+| Test teardown | Teardown Test Sanity Favorites
+
+*** Test Cases ***
+| Сheck PLACEHOLDER is present in favorite TAB
+| | Given User Is On LANDING page
+| | And User clicks FAVORITES tab
+| | Then User verifies No Favorite Contacts Yet Message Is Visible
+
+| Check ITEM is added to favorites
+| | Given User Is On LANDING page
+| | And User clicks CONTACTS tab
+| | And User selects first contact
+| | And User adds contact to favorites
+| | And User clicks FAVORITES tab
+| | Then user verifies contact is added
+
+| Check ITEM is deleted from favorites
+| | Given User Is On LANDING page
+| | When User is already added contact to favorites
+| | And User clicks FAVORITES tab
+| | And user removes contact from favorites
+| | Then User verifies contact is removed from favorites
+
+

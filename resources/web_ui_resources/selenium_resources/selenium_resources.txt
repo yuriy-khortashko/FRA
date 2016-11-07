@@ -33,7 +33,12 @@
 | Login
 | | Wait Until Page Contains Element | xpath=//div[@class='current-flag']/div[contains(@class, 'flag flags')]
 | | Execute Javascript | app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");
+
+| NOTIFICATIONS Popup NO button click 
 | | Click Element | xpath=//button[text()='No']
+
+| NOTIFICATIONS Popup YES button click 
+| | Click Element | xpath=//button[text()='Yes']
 
 | Login Wait Until Is Visible
 | | Wait Until Element Is Visible | xpath=//p[text()='Use your mobile phone number to log in'] | 10
@@ -138,8 +143,61 @@
 | | Click Element | xpath=//*[@id="dialogs"]/dialog[2]/div/div/div/div/div/div/label[2]/div[1]/div/label
 
 
+
+| Landing Page check landing view is present
+| | Wait Until Page Contains Element | xpath=//*[@id='landingPageView']
+ 
+
+| Tab bar is visible
+| | Wait Until Element Is Visible | xpath=//*[@class="tabs items3"]
+
+| Tab bar click FAVORITES tab
+| | Click Element | xpath=//*[@class="nav-button favorites"]
+
+| No Favorite Contacts Yet Message Is Visible
+| | Sleep | 5s
+| | ${text}= | Execute Javascript | return getComputedStyle(document.getElementsByClassName('scroll-list-inner')[0].childNodes[1],'::before').getPropertyValue('content');
+| | Log | ${text}
+| | Should Be Equal | ${text} | \"No favorite contacts yet.\"
+
+
+
+
+
+
+ 
+
+
+| Tab bar click CONTACTS tab
+| | Click Element | xpath=//*[@class="nav-button contacts"]
+
+| CONTACTS tab first contact is visible
+| | Wait Until Element Is Visible | xpath=//*[@id="contactsListContainer"]/div/div[1]/ul/li[2]/div[1]
+
+| CONTACTS tab click first contact
+| | Click Element | xpath=//*[@id="contactsListContainer"]/div/div[1]/ul/li[2]/div[1]
+
+
+
+| Top bar is visible
+| | Wait Until Element Is Visible | xpath=//*[@id="timelineView"]/div/header
+
+| Top bar add contact to favorites
+| | Click Element | xpath=//*[@class="add-favorites"]
+
+| Top bar remove contact from favorites
+| | Click Element | xpath=//*[@class="add-favorites"]
+
+ 
+| FAVORITES tab contact is visible
+| | Wait Until Element Is Visible | //*[@id="contactsListContainer"]/div/div[1]/ul/li[2]/div[1] 
+
+
+
 *** comments ***
 | | Wait Until Element Is Visible | xpath=//div[contains(@class, 'flag flags')] | 10
+
+
 
 
 

@@ -13,10 +13,10 @@
 
 
 | Setup Suite Sanity Registration
-|  | Setup Suite Sanity
+| | Setup Suite Sanity
 
 | Setup Suite Sanity Settings
-|  | Setup Suite Sanity
+| | Setup Suite Sanity
 
 | Teardown Suite Sanity Registration
 | | General Close All Browsers
@@ -32,6 +32,23 @@
 | | Given User Opened AUT
 | | General Maximize Browser Window
 | | Login
+| | NOTIFICATIONS Popup NO button click
+
+
+
+
+| Setup Test Sanity Favorites
+| | General Set Screenshot Directory
+| | Given User Opened AUT
+| | General Maximize Browser Window
+| | Login
+| | NOTIFICATIONS Popup YES button click
+
+
+| Teardown Test Sanity Favorites
+| | General Close All Browsers
+
+
 
 | Given User Opened AUT
 | | General Open AUT
@@ -104,6 +121,14 @@
 
 | When User Logins
 | | Login
+
+| And User selects NO at NOTIFICATIONS popup 
+| | NOTIFICATIONS Popup NO button click 
+| | General Capture Screenshot
+
+| And User selects YES at NOTIFICATIONS popup 
+| | NOTIFICATIONS Popup YES button click 
+| | General Capture Screenshot
 
 | And User Opens Dialer
 | | Header Container Click Keypad Button
@@ -205,3 +230,58 @@
 |  And User closes NOTIFICATIONS popup
 | | Popup Click OK button
 | | General Capture Screenshot
+
+
+
+| Given User Is On LANDING page
+| | Landing Page check landing view is present
+
+
+| And User clicks FAVORITES tab
+| | Tab bar is visible
+| | Tab bar click FAVORITES tab
+
+| Then User verifies No Favorite Contacts Yet Message Is Visible
+| | No Favorite Contacts Yet Message Is Visible
+
+
+
+| And User clicks CONTACTS tab
+| | Tab bar is visible
+| | Tab bar click CONTACTS tab
+
+| And User selects first contact
+| | CONTACTS tab first contact is visible
+| | CONTACTS tab click first contact
+ 
+
+| And User adds contact to favorites
+| | Top bar add contact to favorites
+
+
+| Then user verifies contact is added
+| | FAVORITES tab contact is visible
+
+
+
+| When User is already added contact to favorites
+| | And User clicks CONTACTS tab
+| | And User selects first contact
+| | And User adds contact to favorites
+
+| And user removes contact from favorites
+| | Click Element | xpath=//*[@class="add-favorites"]
+
+| Then User verifies contact is removed from favorites
+| | No Favorite Contacts Yet Message Is Visible
+
+
+
+ 
+
+
+
+
+
+
+
