@@ -190,7 +190,75 @@
 
  
 | FAVORITES tab contact is visible
-| | Wait Until Element Is Visible | //*[@id="contactsListContainer"]/div/div[1]/ul/li[2]/div[1] 
+| | Wait Until Element Is Visible | xpath=//*[@id="contactsListContainer"]/div/div[1]/ul/li[2]/div[1] 
+
+
+
+
+
+
+
+| MENU button should be visible
+| | Wait Until Element Is Visible | xpath=//*[@id="contactsListView"]/header/nav/div/button[2]
+
+| MENU button click
+| | Click button | xpath=//*[@id="contactsListView"]/header/nav/div/button[2]
+
+| MENU LIST should be visible
+| | Wait Until Element Is Visible | xpath=//*[@id="app_actions"]/ul
+
+| MENU LIST click NEW GROUP Button
+| | Sleep | 3s
+| | Click Element | xpath=//*[@id="app_actions"]/ul/li[1]
+
+| NEXT button should be visible
+| | Wait Until Element Is Visible | xpath=//*[@id="groupChat"]/div/main[1]/footer/button
+
+| NEXT Button should be disabled
+| | Element Should Be Disabled | xpath=//*[@id="groupChat"]/div/main[1]/footer/button
+
+
+
+
+
+
+
+
+| First CONTACT element should be visible
+| | Sleep | 1s
+| | Wait Until Element Is Visible | xpath=//*[@id="groupChat"]/div/main[1]/main/participants-editor/div/div[3]/div/div/ul/li[1]
+
+| First CONTACT element click
+| | Click Element | xpath=//*[@id="groupChat"]/div/main[1]/main/participants-editor/div/div[3]/div/div/ul/li[1]
+
+| NEXT Button should be enabled
+| | Element Should Be Enabled | xpath=//*[@id="groupChat"]/div/main[1]/footer/button
+
+
+
+
+| NEXT Button click
+| | Click Button | xpath=//*[@id="groupChat"]/div/main[1]/footer/button
+
+| CREATE GROUP Button should be visible 
+| | Wait Until Element Is Visible | xpath=//*[@id="groupChat"]/div/main[3]/footer/button
+
+| CREATE GROUP Button should be enabled
+| | Element Should Be Enabled | xpath=//*[@id="groupChat"]/div/main[3]/footer/button
+
+
+
+| CREATE GROUP Button click
+| | Click Button | xpath=//*[@id="groupChat"]/div/main[3]/footer/button
+
+| PARTICIPANTS_EDITOR Screen should be visible
+| | Wait Until Element Is Visible | xpath=//*[@class='content recent_contacts']
+
+
+
+
+
+
 
 
 

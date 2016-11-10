@@ -277,6 +277,52 @@
 
 
 
+
+| And User clicks MENU button
+| | MENU button should be visible
+| | MENU button click
+
+| And User clicks NEW GROUP Button
+| | MENU LIST should be visible
+| | MENU LIST click NEW GROUP Button
+
+
+| Then User verifies NEXT button is disabled
+| | NEXT button should be visible
+| | NEXT Button should be disabled
+
+
+
+
+| And User adds contact to the group
+| | First CONTACT element should be visible
+| | First CONTACT element click
+
+
+| Then User verifies NEXT button is enabled
+| | NEXT button should be visible
+| | NEXT Button should be enabled
+
+
+| And User click NEXT button
+| | NEXT Button click
+
+| Then User verifies CREATE GROUP Button is enabled
+| | CREATE GROUP Button should be visible 
+| | CREATE GROUP Button should be enabled
+
+| And User click CREATE GROUP Button
+| | CREATE GROUP Button click
+
+| Then User verifies PARTICIPANTS_EDITOR Screen is displayed
+| | PARTICIPANTS_EDITOR Screen should be visible
+
+*** comment ***
+
+
+
+
+
  
 
 

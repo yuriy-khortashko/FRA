@@ -1,0 +1,49 @@
+*** Variables ***
+| ${RESOURCE} | web_ui_resources |
+
+*** Settings ***
+| Resource | ../resources/web_ui_resources/keywords.txt
+| Test setup | Setup Test Sanity Favorites
+| Test teardown | Teardown Test Sanity Favorites
+
+
+
+*** Test Cases ***
+| Check 'Next' button is disabled 
+| | Given User Is On LANDING page
+| | And User clicks MENU button
+| | And User clicks NEW GROUP Button
+| | Then User verifies NEXT button is disabled
+
+| Check 'Next' button is enabled
+| | Given User Is On LANDING page
+| | And User clicks MENU button
+| | And User clicks NEW GROUP Button 
+| | And User adds contact to the group
+| | Then User verifies NEXT button is enabled
+
+| Check 'Create group' button is enabled
+| | Given User Is On LANDING page
+| | And User clicks MENU button
+| | And User clicks NEW GROUP Button 
+| | And User adds contact to the group
+| | And User click NEXT button
+| | Then User verifies CREATE GROUP Button is enabled
+
+| Check 'Back' button is workable on Group details screen
+| | Given User Is On LANDING page
+| | And User clicks MENU button
+| | And User clicks NEW GROUP Button 
+| | And User adds contact to the group
+| | And User click NEXT button
+| | And User click CREATE GROUP Button
+| | Then User verifies PARTICIPANTS_EDITOR Screen is displayed
+
+
+
+
+
+
+
+
+
