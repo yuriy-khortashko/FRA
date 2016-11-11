@@ -155,10 +155,9 @@
 | | Click Element | xpath=//*[@class="nav-button favorites"]
 
 | No Favorite Contacts Yet Message Is Visible
-| | Sleep | 5s
-| | ${text}= | Execute Javascript | return getComputedStyle(document.getElementsByClassName('scroll-list-inner')[0].childNodes[1],'::before').getPropertyValue('content');
-| | Log | ${text}
-| | Should Be Equal | ${text} | \"No favorite contacts yet.\"
+| | Sleep | 3s
+| | Wait Until Element Is Visible | xpath=//*[@id="placeHolder"]/span[text() = 'No favorite contacts yet.']
+
 
 
 
@@ -265,7 +264,11 @@
 *** comments ***
 | | Wait Until Element Is Visible | xpath=//div[contains(@class, 'flag flags')] | 10
 
-
+| No Favorite Contacts Yet Message Is Visible
+| | Sleep | 5s
+| | ${text}= | Execute Javascript | return getComputedStyle(document.getElementsByClassName('scroll-list-inner')[0].childNodes[1],'::before').getPropertyValue('content');
+| | Log | ${text}
+| | Should Be Equal | ${text} | \"No favorite contacts yet.\"
 
 
 

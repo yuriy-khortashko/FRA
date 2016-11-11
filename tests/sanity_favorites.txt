@@ -6,6 +6,7 @@
 | Test setup | Setup Test Sanity Favorites
 | Test teardown | Teardown Test Sanity Favorites
 
+
 *** Test Cases ***
 | Сheck PLACEHOLDER is present in favorite TAB
 | | Given User Is On LANDING page
@@ -26,5 +27,8 @@
 | | And User clicks FAVORITES tab
 | | And user removes contact from favorites
 | | Then User verifies contact is removed from favorites
+
+
+
 
 

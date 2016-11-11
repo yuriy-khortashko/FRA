@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20161110 19:21:11.417" generator="Robot 3.0 (Python 2.7.12 on win32)">
-<suite source="D:\fringKandy\FRA\tests\sanity_group_creation.txt" id="s1" name="Sanity Group Creation">
-<test id="s1-t1" name="Check 'Next' button is disabled">
+<robot generated="20161111 15:40:53.231" generator="Robot 3.0 (Python 2.7.12 on win32)">
+<suite source="D:\fringKandy\FRA\tests\sanity_favorites.txt" id="s1" name="Sanity Favorites">
+<test id="s1-t1" name="Сheck PLACEHOLDER is present in favorite TAB">
 <kw type="setup" name="Setup Test Sanity Favorites" library="keywords">
 <kw name="General Set Screenshot Directory" library="selenium_resources">
 <kw name="Set Screenshot Directory" library="Selenium2Library">
@@ -9,9 +9,9 @@
 <arguments>
 <arg>selenium_screenshots</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:21:11.637" starttime="20161110 19:21:11.637"></status>
+<status status="PASS" endtime="20161111 15:40:53.451" starttime="20161111 15:40:53.451"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:11.637" starttime="20161110 19:21:11.637"></status>
+<status status="PASS" endtime="20161111 15:40:53.451" starttime="20161111 15:40:53.451"></status>
 </kw>
 <kw name="Given User Opened AUT" library="keywords">
 <kw name="General Open AUT" library="selenium_resources">
@@ -21,10 +21,10 @@
 <arg>https://fringkandy.kandy.io/</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20161110 19:21:11.637" level="INFO">Opening browser 'chrome' to base url 'https://fringkandy.kandy.io/'</msg>
-<status status="PASS" endtime="20161110 19:21:23.411" starttime="20161110 19:21:11.637"></status>
+<msg timestamp="20161111 15:40:53.451" level="INFO">Opening browser 'chrome' to base url 'https://fringkandy.kandy.io/'</msg>
+<status status="PASS" endtime="20161111 15:41:05.282" starttime="20161111 15:40:53.451"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:23.411" starttime="20161110 19:21:11.637"></status>
+<status status="PASS" endtime="20161111 15:41:05.282" starttime="20161111 15:40:53.451"></status>
 </kw>
 <kw name="Login Wait Until Is Visible" library="selenium_resources">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -33,33 +33,33 @@
 <arg>xpath=//p[text()='Use your mobile phone number to log in']</arg>
 <arg>10</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:21:27.031" starttime="20161110 19:21:23.412"></status>
+<status status="PASS" endtime="20161111 15:41:08.742" starttime="20161111 15:41:05.283"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>xpath=//div[contains(@class, 'current-flag')]</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:21:27.076" starttime="20161110 19:21:27.031"></status>
+<status status="PASS" endtime="20161111 15:41:08.788" starttime="20161111 15:41:08.742"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:27.076" starttime="20161110 19:21:23.411"></status>
+<status status="PASS" endtime="20161111 15:41:08.788" starttime="20161111 15:41:05.282"></status>
 </kw>
 <kw name="General Capture Screenshot" library="selenium_resources">
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20161110 19:21:28.295" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-1.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20161110 19:21:28.295" starttime="20161110 19:21:27.077"></status>
+<msg timestamp="20161111 15:41:09.938" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-1.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161111 15:41:09.938" starttime="20161111 15:41:08.788"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:28.295" starttime="20161110 19:21:27.077"></status>
+<status status="PASS" endtime="20161111 15:41:09.938" starttime="20161111 15:41:08.788"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:28.295" starttime="20161110 19:21:11.637"></status>
+<status status="PASS" endtime="20161111 15:41:09.938" starttime="20161111 15:40:53.451"></status>
 </kw>
 <kw name="General Maximize Browser Window" library="selenium_resources">
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20161110 19:21:28.306" starttime="20161110 19:21:28.295"></status>
+<status status="PASS" endtime="20161111 15:41:09.958" starttime="20161111 15:41:09.938"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:28.306" starttime="20161110 19:21:28.295"></status>
+<status status="PASS" endtime="20161111 15:41:09.958" starttime="20161111 15:41:09.938"></status>
 </kw>
 <kw name="Login" library="selenium_resources">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -67,18 +67,18 @@
 <arguments>
 <arg>xpath=//div[@class='current-flag']/div[contains(@class, 'flag flags')]</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:21:28.348" starttime="20161110 19:21:28.306"></status>
+<status status="PASS" endtime="20161111 15:41:09.977" starttime="20161111 15:41:09.958"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</arg>
 </arguments>
-<msg timestamp="20161110 19:21:28.349" level="INFO">Executing JavaScript:
+<msg timestamp="20161111 15:41:09.978" level="INFO">Executing JavaScript:
 app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</msg>
-<status status="PASS" endtime="20161110 19:21:28.355" starttime="20161110 19:21:28.349"></status>
+<status status="PASS" endtime="20161111 15:41:10.001" starttime="20161111 15:41:09.977"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:28.355" starttime="20161110 19:21:28.306"></status>
+<status status="PASS" endtime="20161111 15:41:10.001" starttime="20161111 15:41:09.958"></status>
 </kw>
 <kw name="NOTIFICATIONS Popup YES button click" library="selenium_resources">
 <kw name="Click Element" library="Selenium2Library">
@@ -86,12 +86,12 @@ app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</
 <arguments>
 <arg>xpath=//button[text()='Yes']</arg>
 </arguments>
-<msg timestamp="20161110 19:21:28.356" level="INFO">Clicking element 'xpath=//button[text()='Yes']'.</msg>
-<status status="PASS" endtime="20161110 19:21:29.302" starttime="20161110 19:21:28.356"></status>
+<msg timestamp="20161111 15:41:10.002" level="INFO">Clicking element 'xpath=//button[text()='Yes']'.</msg>
+<status status="PASS" endtime="20161111 15:41:10.709" starttime="20161111 15:41:10.002"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:29.302" starttime="20161110 19:21:28.356"></status>
+<status status="PASS" endtime="20161111 15:41:10.709" starttime="20161111 15:41:10.001"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:29.302" starttime="20161110 19:21:11.637"></status>
+<status status="PASS" endtime="20161111 15:41:10.709" starttime="20161111 15:40:53.451"></status>
 </kw>
 <kw name="Given User Is On LANDING page" library="keywords">
 <kw name="Landing Page check landing view is present" library="selenium_resources">
@@ -100,104 +100,70 @@ app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</
 <arguments>
 <arg>xpath=//*[@id='landingPageView']</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:21:29.323" starttime="20161110 19:21:29.303"></status>
+<status status="PASS" endtime="20161111 15:41:10.748" starttime="20161111 15:41:10.710"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:29.323" starttime="20161110 19:21:29.303"></status>
+<status status="PASS" endtime="20161111 15:41:10.749" starttime="20161111 15:41:10.710"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:29.324" starttime="20161110 19:21:29.303"></status>
+<status status="PASS" endtime="20161111 15:41:10.749" starttime="20161111 15:41:10.710"></status>
 </kw>
-<kw name="And User clicks MENU button" library="keywords">
-<kw name="MENU button should be visible" library="selenium_resources">
+<kw name="And User clicks FAVORITES tab" library="keywords">
+<kw name="Tab bar is visible" library="selenium_resources">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@id="contactsListView"]/header/nav/div/button[2]</arg>
+<arg>xpath=//*[@class="tabs items3"]</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:21:29.364" starttime="20161110 19:21:29.327"></status>
+<status status="PASS" endtime="20161111 15:41:13.038" starttime="20161111 15:41:10.750"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:29.364" starttime="20161110 19:21:29.326"></status>
+<status status="PASS" endtime="20161111 15:41:13.038" starttime="20161111 15:41:10.749"></status>
 </kw>
-<kw name="MENU button click" library="selenium_resources">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
+<kw name="Tab bar click FAVORITES tab" library="selenium_resources">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//*[@id="contactsListView"]/header/nav/div/button[2]</arg>
+<arg>xpath=//*[@class="nav-button favorites"]</arg>
 </arguments>
-<msg timestamp="20161110 19:21:29.365" level="INFO">Clicking button 'xpath=//*[@id="contactsListView"]/header/nav/div/button[2]'.</msg>
-<status status="PASS" endtime="20161110 19:21:29.472" starttime="20161110 19:21:29.364"></status>
+<msg timestamp="20161111 15:41:13.039" level="INFO">Clicking element 'xpath=//*[@class="nav-button favorites"]'.</msg>
+<status status="PASS" endtime="20161111 15:41:13.090" starttime="20161111 15:41:13.039"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:29.472" starttime="20161110 19:21:29.364"></status>
+<status status="PASS" endtime="20161111 15:41:13.090" starttime="20161111 15:41:13.038"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:29.473" starttime="20161110 19:21:29.324"></status>
+<status status="PASS" endtime="20161111 15:41:13.091" starttime="20161111 15:41:10.749"></status>
 </kw>
-<kw name="And User clicks NEW GROUP Button" library="keywords">
-<kw name="MENU LIST should be visible" library="selenium_resources">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="app_actions"]/ul</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:21:29.518" starttime="20161110 19:21:29.473"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:29.519" starttime="20161110 19:21:29.473"></status>
-</kw>
-<kw name="MENU LIST click NEW GROUP Button" library="selenium_resources">
+<kw name="Then User verifies No Favorite Contacts Yet Message Is Visible" library="keywords">
+<kw name="No Favorite Contacts Yet Message Is Visible" library="selenium_resources">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3s</arg>
 </arguments>
-<msg timestamp="20161110 19:21:32.519" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20161110 19:21:32.519" starttime="20161110 19:21:29.519"></status>
+<msg timestamp="20161111 15:41:16.101" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20161111 15:41:16.101" starttime="20161111 15:41:13.092"></status>
 </kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="app_actions"]/ul/li[1]</arg>
-</arguments>
-<msg timestamp="20161110 19:21:32.522" level="INFO">Clicking element 'xpath=//*[@id="app_actions"]/ul/li[1]'.</msg>
-<status status="PASS" endtime="20161110 19:21:32.579" starttime="20161110 19:21:32.522"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:32.579" starttime="20161110 19:21:29.519"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:32.579" starttime="20161110 19:21:29.473"></status>
-</kw>
-<kw name="Then User verifies NEXT button is disabled" library="keywords">
-<kw name="NEXT button should be visible" library="selenium_resources">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/footer/button</arg>
+<arg>xpath=//*[@id="placeHolder"]/span[text() = 'No favorite contacts yet.']</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:21:32.616" starttime="20161110 19:21:32.579"></status>
+<status status="PASS" endtime="20161111 15:41:16.121" starttime="20161111 15:41:16.101"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:32.616" starttime="20161110 19:21:32.579"></status>
+<status status="PASS" endtime="20161111 15:41:16.121" starttime="20161111 15:41:13.091"></status>
 </kw>
-<kw name="NEXT Button should be disabled" library="selenium_resources">
-<kw name="Element Should Be Disabled" library="Selenium2Library">
-<doc>Verifies that element identified with `locator` is disabled.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/footer/button</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:21:32.646" starttime="20161110 19:21:32.616"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:32.646" starttime="20161110 19:21:32.616"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:32.647" starttime="20161110 19:21:32.579"></status>
+<status status="PASS" endtime="20161111 15:41:16.121" starttime="20161111 15:41:13.091"></status>
 </kw>
 <kw type="teardown" name="Teardown Test Sanity Favorites" library="keywords">
 <kw name="General Close All Browsers" library="selenium_resources">
 <kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20161110 19:21:37.038" starttime="20161110 19:21:32.648"></status>
+<status status="PASS" endtime="20161111 15:41:20.373" starttime="20161111 15:41:16.131"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:37.038" starttime="20161110 19:21:32.648"></status>
+<status status="PASS" endtime="20161111 15:41:20.373" starttime="20161111 15:41:16.131"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:37.038" starttime="20161110 19:21:32.648"></status>
+<status status="PASS" endtime="20161111 15:41:20.373" starttime="20161111 15:41:16.131"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:37.038" critical="yes" starttime="20161110 19:21:11.627"></status>
+<status status="PASS" endtime="20161111 15:41:20.373" critical="yes" starttime="20161111 15:40:53.451"></status>
 </test>
-<test id="s1-t2" name="Check 'Next' button is enabled">
+<test id="s1-t2" name="Check ITEM is added to favorites">
 <kw type="setup" name="Setup Test Sanity Favorites" library="keywords">
 <kw name="General Set Screenshot Directory" library="selenium_resources">
 <kw name="Set Screenshot Directory" library="Selenium2Library">
@@ -205,9 +171,9 @@ app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</
 <arguments>
 <arg>selenium_screenshots</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:21:37.038" starttime="20161110 19:21:37.038"></status>
+<status status="PASS" endtime="20161111 15:41:20.373" starttime="20161111 15:41:20.373"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:37.038" starttime="20161110 19:21:37.038"></status>
+<status status="PASS" endtime="20161111 15:41:20.373" starttime="20161111 15:41:20.373"></status>
 </kw>
 <kw name="Given User Opened AUT" library="keywords">
 <kw name="General Open AUT" library="selenium_resources">
@@ -217,238 +183,10 @@ app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</
 <arg>https://fringkandy.kandy.io/</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20161110 19:21:37.038" level="INFO">Opening browser 'chrome' to base url 'https://fringkandy.kandy.io/'</msg>
-<status status="PASS" endtime="20161110 19:21:47.855" starttime="20161110 19:21:37.038"></status>
+<msg timestamp="20161111 15:41:20.373" level="INFO">Opening browser 'chrome' to base url 'https://fringkandy.kandy.io/'</msg>
+<status status="PASS" endtime="20161111 15:41:33.522" starttime="20161111 15:41:20.373"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:21:47.855" starttime="20161110 19:21:37.038"></status>
-</kw>
-<kw name="Login Wait Until Is Visible" library="selenium_resources">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//p[text()='Use your mobile phone number to log in']</arg>
-<arg>10</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:21:51.062" starttime="20161110 19:21:47.856"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//div[contains(@class, 'current-flag')]</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:21:51.095" starttime="20161110 19:21:51.062"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:51.095" starttime="20161110 19:21:47.855"></status>
-</kw>
-<kw name="General Capture Screenshot" library="selenium_resources">
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20161110 19:21:52.261" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-2.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20161110 19:21:52.261" starttime="20161110 19:21:51.096"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:52.261" starttime="20161110 19:21:51.095"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:52.261" starttime="20161110 19:21:37.038"></status>
-</kw>
-<kw name="General Maximize Browser Window" library="selenium_resources">
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20161110 19:21:52.281" starttime="20161110 19:21:52.261"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:52.281" starttime="20161110 19:21:52.261"></status>
-</kw>
-<kw name="Login" library="selenium_resources">
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<arguments>
-<arg>xpath=//div[@class='current-flag']/div[contains(@class, 'flag flags')]</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:21:52.319" starttime="20161110 19:21:52.281"></status>
-</kw>
-<kw name="Execute Javascript" library="Selenium2Library">
-<doc>Executes the given JavaScript code.</doc>
-<arguments>
-<arg>app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</arg>
-</arguments>
-<msg timestamp="20161110 19:21:52.320" level="INFO">Executing JavaScript:
-app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</msg>
-<status status="PASS" endtime="20161110 19:21:52.328" starttime="20161110 19:21:52.320"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:52.329" starttime="20161110 19:21:52.281"></status>
-</kw>
-<kw name="NOTIFICATIONS Popup YES button click" library="selenium_resources">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//button[text()='Yes']</arg>
-</arguments>
-<msg timestamp="20161110 19:21:52.329" level="INFO">Clicking element 'xpath=//button[text()='Yes']'.</msg>
-<status status="PASS" endtime="20161110 19:21:52.968" starttime="20161110 19:21:52.329"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:52.968" starttime="20161110 19:21:52.329"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:52.968" starttime="20161110 19:21:37.038"></status>
-</kw>
-<kw name="Given User Is On LANDING page" library="keywords">
-<kw name="Landing Page check landing view is present" library="selenium_resources">
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<arguments>
-<arg>xpath=//*[@id='landingPageView']</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:21:52.987" starttime="20161110 19:21:52.969"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:52.987" starttime="20161110 19:21:52.969"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:52.988" starttime="20161110 19:21:52.969"></status>
-</kw>
-<kw name="And User clicks MENU button" library="keywords">
-<kw name="MENU button should be visible" library="selenium_resources">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="contactsListView"]/header/nav/div/button[2]</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:21:53.022" starttime="20161110 19:21:52.989"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:53.022" starttime="20161110 19:21:52.988"></status>
-</kw>
-<kw name="MENU button click" library="selenium_resources">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="contactsListView"]/header/nav/div/button[2]</arg>
-</arguments>
-<msg timestamp="20161110 19:21:53.023" level="INFO">Clicking button 'xpath=//*[@id="contactsListView"]/header/nav/div/button[2]'.</msg>
-<status status="PASS" endtime="20161110 19:21:53.107" starttime="20161110 19:21:53.023"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:53.107" starttime="20161110 19:21:53.023"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:53.107" starttime="20161110 19:21:52.988"></status>
-</kw>
-<kw name="And User clicks NEW GROUP Button" library="keywords">
-<kw name="MENU LIST should be visible" library="selenium_resources">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="app_actions"]/ul</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:21:53.151" starttime="20161110 19:21:53.108"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:53.151" starttime="20161110 19:21:53.108"></status>
-</kw>
-<kw name="MENU LIST click NEW GROUP Button" library="selenium_resources">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3s</arg>
-</arguments>
-<msg timestamp="20161110 19:21:56.156" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20161110 19:21:56.156" starttime="20161110 19:21:53.152"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="app_actions"]/ul/li[1]</arg>
-</arguments>
-<msg timestamp="20161110 19:21:56.156" level="INFO">Clicking element 'xpath=//*[@id="app_actions"]/ul/li[1]'.</msg>
-<status status="PASS" endtime="20161110 19:21:56.197" starttime="20161110 19:21:56.156"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:56.197" starttime="20161110 19:21:53.152"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:56.197" starttime="20161110 19:21:53.108"></status>
-</kw>
-<kw name="And User adds contact to the group" library="keywords">
-<kw name="First CONTACT element should be visible" library="selenium_resources">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20161110 19:21:57.202" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20161110 19:21:57.202" starttime="20161110 19:21:56.197"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/main/participants-editor/div/div[3]/div/div/ul/li[1]</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:21:57.222" starttime="20161110 19:21:57.202"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:57.222" starttime="20161110 19:21:56.197"></status>
-</kw>
-<kw name="First CONTACT element click" library="selenium_resources">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/main/participants-editor/div/div[3]/div/div/ul/li[1]</arg>
-</arguments>
-<msg timestamp="20161110 19:21:57.222" level="INFO">Clicking element 'xpath=//*[@id="groupChat"]/div/main[1]/main/participants-editor/div/div[3]/div/div/ul/li[1]'.</msg>
-<status status="PASS" endtime="20161110 19:21:57.263" starttime="20161110 19:21:57.222"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:57.263" starttime="20161110 19:21:57.222"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:57.263" starttime="20161110 19:21:56.197"></status>
-</kw>
-<kw name="Then User verifies NEXT button is enabled" library="keywords">
-<kw name="NEXT button should be visible" library="selenium_resources">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/footer/button</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:21:57.293" starttime="20161110 19:21:57.263"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:57.294" starttime="20161110 19:21:57.263"></status>
-</kw>
-<kw name="NEXT Button should be enabled" library="selenium_resources">
-<kw name="Element Should Be Enabled" library="Selenium2Library">
-<doc>Verifies that element identified with `locator` is enabled.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/footer/button</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:21:57.324" starttime="20161110 19:21:57.294"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:57.324" starttime="20161110 19:21:57.294"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:21:57.324" starttime="20161110 19:21:57.263"></status>
-</kw>
-<kw type="teardown" name="Teardown Test Sanity Favorites" library="keywords">
-<kw name="General Close All Browsers" library="selenium_resources">
-<kw name="Close All Browsers" library="Selenium2Library">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20161110 19:22:01.769" starttime="20161110 19:21:57.326"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:01.769" starttime="20161110 19:21:57.326"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:01.769" starttime="20161110 19:21:57.325"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:01.769" critical="yes" starttime="20161110 19:21:37.038"></status>
-</test>
-<test id="s1-t3" name="Check 'Create group' button is enabled">
-<kw type="setup" name="Setup Test Sanity Favorites" library="keywords">
-<kw name="General Set Screenshot Directory" library="selenium_resources">
-<kw name="Set Screenshot Directory" library="Selenium2Library">
-<doc>Sets the root output directory for captured screenshots.</doc>
-<arguments>
-<arg>selenium_screenshots</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:01.769" starttime="20161110 19:22:01.769"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:01.769" starttime="20161110 19:22:01.769"></status>
-</kw>
-<kw name="Given User Opened AUT" library="keywords">
-<kw name="General Open AUT" library="selenium_resources">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>https://fringkandy.kandy.io/</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20161110 19:22:01.769" level="INFO">Opening browser 'chrome' to base url 'https://fringkandy.kandy.io/'</msg>
-<status status="PASS" endtime="20161110 19:22:12.305" starttime="20161110 19:22:01.769"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:12.305" starttime="20161110 19:22:01.769"></status>
+<status status="PASS" endtime="20161111 15:41:33.522" starttime="20161111 15:41:20.373"></status>
 </kw>
 <kw name="Login Wait Until Is Visible" library="selenium_resources">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -457,33 +195,33 @@ app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</
 <arg>xpath=//p[text()='Use your mobile phone number to log in']</arg>
 <arg>10</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:22:15.374" starttime="20161110 19:22:12.306"></status>
+<status status="PASS" endtime="20161111 15:41:37.036" starttime="20161111 15:41:33.523"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>xpath=//div[contains(@class, 'current-flag')]</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:22:15.402" starttime="20161110 19:22:15.374"></status>
+<status status="PASS" endtime="20161111 15:41:37.088" starttime="20161111 15:41:37.036"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:15.402" starttime="20161110 19:22:12.306"></status>
+<status status="PASS" endtime="20161111 15:41:37.088" starttime="20161111 15:41:33.522"></status>
 </kw>
 <kw name="General Capture Screenshot" library="selenium_resources">
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20161110 19:22:16.562" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-3.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20161110 19:22:16.562" starttime="20161110 19:22:15.403"></status>
+<msg timestamp="20161111 15:41:38.282" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-2.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161111 15:41:38.282" starttime="20161111 15:41:37.088"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:16.562" starttime="20161110 19:22:15.402"></status>
+<status status="PASS" endtime="20161111 15:41:38.282" starttime="20161111 15:41:37.088"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:16.562" starttime="20161110 19:22:01.769"></status>
+<status status="PASS" endtime="20161111 15:41:38.282" starttime="20161111 15:41:20.373"></status>
 </kw>
 <kw name="General Maximize Browser Window" library="selenium_resources">
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20161110 19:22:16.582" starttime="20161110 19:22:16.572"></status>
+<status status="PASS" endtime="20161111 15:41:38.308" starttime="20161111 15:41:38.283"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:16.582" starttime="20161110 19:22:16.562"></status>
+<status status="PASS" endtime="20161111 15:41:38.308" starttime="20161111 15:41:38.282"></status>
 </kw>
 <kw name="Login" library="selenium_resources">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -491,18 +229,18 @@ app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</
 <arguments>
 <arg>xpath=//div[@class='current-flag']/div[contains(@class, 'flag flags')]</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:22:16.602" starttime="20161110 19:22:16.582"></status>
+<status status="PASS" endtime="20161111 15:41:38.340" starttime="20161111 15:41:38.308"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</arg>
 </arguments>
-<msg timestamp="20161110 19:22:16.603" level="INFO">Executing JavaScript:
+<msg timestamp="20161111 15:41:38.341" level="INFO">Executing JavaScript:
 app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</msg>
-<status status="PASS" endtime="20161110 19:22:16.622" starttime="20161110 19:22:16.603"></status>
+<status status="PASS" endtime="20161111 15:41:38.351" starttime="20161111 15:41:38.340"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:16.622" starttime="20161110 19:22:16.582"></status>
+<status status="PASS" endtime="20161111 15:41:38.351" starttime="20161111 15:41:38.308"></status>
 </kw>
 <kw name="NOTIFICATIONS Popup YES button click" library="selenium_resources">
 <kw name="Click Element" library="Selenium2Library">
@@ -510,12 +248,12 @@ app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</
 <arguments>
 <arg>xpath=//button[text()='Yes']</arg>
 </arguments>
-<msg timestamp="20161110 19:22:16.623" level="INFO">Clicking element 'xpath=//button[text()='Yes']'.</msg>
-<status status="PASS" endtime="20161110 19:22:17.242" starttime="20161110 19:22:16.622"></status>
+<msg timestamp="20161111 15:41:38.353" level="INFO">Clicking element 'xpath=//button[text()='Yes']'.</msg>
+<status status="PASS" endtime="20161111 15:41:38.944" starttime="20161111 15:41:38.352"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:17.242" starttime="20161110 19:22:16.622"></status>
+<status status="PASS" endtime="20161111 15:41:38.945" starttime="20161111 15:41:38.351"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:17.242" starttime="20161110 19:22:01.769"></status>
+<status status="PASS" endtime="20161111 15:41:38.945" starttime="20161111 15:41:20.373"></status>
 </kw>
 <kw name="Given User Is On LANDING page" library="keywords">
 <kw name="Landing Page check landing view is present" library="selenium_resources">
@@ -524,408 +262,43 @@ app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</
 <arguments>
 <arg>xpath=//*[@id='landingPageView']</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:22:17.271" starttime="20161110 19:22:17.243"></status>
+<status status="PASS" endtime="20161111 15:41:39.000" starttime="20161111 15:41:38.946"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:17.271" starttime="20161110 19:22:17.243"></status>
+<status status="PASS" endtime="20161111 15:41:39.000" starttime="20161111 15:41:38.945"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:17.271" starttime="20161110 19:22:17.242"></status>
+<status status="PASS" endtime="20161111 15:41:39.000" starttime="20161111 15:41:38.945"></status>
 </kw>
-<kw name="And User clicks MENU button" library="keywords">
-<kw name="MENU button should be visible" library="selenium_resources">
+<kw name="And User clicks CONTACTS tab" library="keywords">
+<kw name="Tab bar is visible" library="selenium_resources">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@id="contactsListView"]/header/nav/div/button[2]</arg>
+<arg>xpath=//*[@class="tabs items3"]</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:22:17.332" starttime="20161110 19:22:17.272"></status>
+<status status="PASS" endtime="20161111 15:41:41.452" starttime="20161111 15:41:39.001"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:17.332" starttime="20161110 19:22:17.272"></status>
+<status status="PASS" endtime="20161111 15:41:41.452" starttime="20161111 15:41:39.001"></status>
 </kw>
-<kw name="MENU button click" library="selenium_resources">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="contactsListView"]/header/nav/div/button[2]</arg>
-</arguments>
-<msg timestamp="20161110 19:22:17.333" level="INFO">Clicking button 'xpath=//*[@id="contactsListView"]/header/nav/div/button[2]'.</msg>
-<status status="PASS" endtime="20161110 19:22:17.414" starttime="20161110 19:22:17.333"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:17.415" starttime="20161110 19:22:17.332"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:17.415" starttime="20161110 19:22:17.271"></status>
-</kw>
-<kw name="And User clicks NEW GROUP Button" library="keywords">
-<kw name="MENU LIST should be visible" library="selenium_resources">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="app_actions"]/ul</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:17.456" starttime="20161110 19:22:17.416"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:17.457" starttime="20161110 19:22:17.416"></status>
-</kw>
-<kw name="MENU LIST click NEW GROUP Button" library="selenium_resources">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3s</arg>
-</arguments>
-<msg timestamp="20161110 19:22:20.459" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20161110 19:22:20.459" starttime="20161110 19:22:17.457"></status>
-</kw>
+<kw name="Tab bar click CONTACTS tab" library="selenium_resources">
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//*[@id="app_actions"]/ul/li[1]</arg>
+<arg>xpath=//*[@class="nav-button contacts"]</arg>
 </arguments>
-<msg timestamp="20161110 19:22:20.459" level="INFO">Clicking element 'xpath=//*[@id="app_actions"]/ul/li[1]'.</msg>
-<status status="PASS" endtime="20161110 19:22:20.491" starttime="20161110 19:22:20.459"></status>
+<msg timestamp="20161111 15:41:41.453" level="INFO">Clicking element 'xpath=//*[@class="nav-button contacts"]'.</msg>
+<status status="PASS" endtime="20161111 15:41:41.510" starttime="20161111 15:41:41.453"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:20.491" starttime="20161110 19:22:17.457"></status>
+<status status="PASS" endtime="20161111 15:41:41.510" starttime="20161111 15:41:41.453"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:20.491" starttime="20161110 19:22:17.415"></status>
+<status status="PASS" endtime="20161111 15:41:41.510" starttime="20161111 15:41:39.000"></status>
 </kw>
-<kw name="And User adds contact to the group" library="keywords">
-<kw name="First CONTACT element should be visible" library="selenium_resources">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20161110 19:22:21.493" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20161110 19:22:21.493" starttime="20161110 19:22:20.493"></status>
-</kw>
+<kw name="And User selects first contact" library="keywords">
+<kw name="CONTACTS tab first contact is visible" library="selenium_resources">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/main/participants-editor/div/div[3]/div/div/ul/li[1]</arg>
+<arg>xpath=//*[@id="contactsListContainer"]/div/div[1]/ul/li[2]/div[1]</arg>
 </arguments>
-<status status="PASS" endtime="20161110 19:22:21.524" starttime="20161110 19:22:21.493"></status>
+<status status="PASS" endtime="20161111 15:41:41.660" starttime="20161111 15:41:41.511"></status>
 </kw>
-<status status="PASS" endtime="20161110 19:22:21.524" starttime="20161110 19:22:20.492"></status>
-</kw>
-<kw name="First CONTACT element click" library="selenium_resources">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/main/participants-editor/div/div[3]/div/div/ul/li[1]</arg>
-</arguments>
-<msg timestamp="20161110 19:22:21.525" level="INFO">Clicking element 'xpath=//*[@id="groupChat"]/div/main[1]/main/participants-editor/div/div[3]/div/div/ul/li[1]'.</msg>
-<status status="PASS" endtime="20161110 19:22:21.568" starttime="20161110 19:22:21.524"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:21.568" starttime="20161110 19:22:21.524"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:21.568" starttime="20161110 19:22:20.492"></status>
-</kw>
-<kw name="And User click NEXT button" library="keywords">
-<kw name="NEXT Button click" library="selenium_resources">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/footer/button</arg>
-</arguments>
-<msg timestamp="20161110 19:22:21.570" level="INFO">Clicking button 'xpath=//*[@id="groupChat"]/div/main[1]/footer/button'.</msg>
-<status status="PASS" endtime="20161110 19:22:21.645" starttime="20161110 19:22:21.569"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:21.645" starttime="20161110 19:22:21.569"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:21.645" starttime="20161110 19:22:21.569"></status>
-</kw>
-<kw name="Then User verifies CREATE GROUP Button is enabled" library="keywords">
-<kw name="CREATE GROUP Button should be visible" library="selenium_resources">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[3]/footer/button</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:21.670" starttime="20161110 19:22:21.645"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:21.670" starttime="20161110 19:22:21.645"></status>
-</kw>
-<kw name="CREATE GROUP Button should be enabled" library="selenium_resources">
-<kw name="Element Should Be Enabled" library="Selenium2Library">
-<doc>Verifies that element identified with `locator` is enabled.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[3]/footer/button</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:21.696" starttime="20161110 19:22:21.671"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:21.696" starttime="20161110 19:22:21.670"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:21.696" starttime="20161110 19:22:21.645"></status>
-</kw>
-<kw type="teardown" name="Teardown Test Sanity Favorites" library="keywords">
-<kw name="General Close All Browsers" library="selenium_resources">
-<kw name="Close All Browsers" library="Selenium2Library">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20161110 19:22:26.113" starttime="20161110 19:22:21.697"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:26.113" starttime="20161110 19:22:21.697"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:26.113" starttime="20161110 19:22:21.696"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:26.113" critical="yes" starttime="20161110 19:22:01.769"></status>
-</test>
-<test id="s1-t4" name="Check 'Back' button is workable on Group details screen">
-<kw type="setup" name="Setup Test Sanity Favorites" library="keywords">
-<kw name="General Set Screenshot Directory" library="selenium_resources">
-<kw name="Set Screenshot Directory" library="Selenium2Library">
-<doc>Sets the root output directory for captured screenshots.</doc>
-<arguments>
-<arg>selenium_screenshots</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:26.113" starttime="20161110 19:22:26.113"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:26.113" starttime="20161110 19:22:26.113"></status>
-</kw>
-<kw name="Given User Opened AUT" library="keywords">
-<kw name="General Open AUT" library="selenium_resources">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>https://fringkandy.kandy.io/</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20161110 19:22:26.113" level="INFO">Opening browser 'chrome' to base url 'https://fringkandy.kandy.io/'</msg>
-<status status="PASS" endtime="20161110 19:22:36.835" starttime="20161110 19:22:26.113"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:36.835" starttime="20161110 19:22:26.113"></status>
-</kw>
-<kw name="Login Wait Until Is Visible" library="selenium_resources">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//p[text()='Use your mobile phone number to log in']</arg>
-<arg>10</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:40.016" starttime="20161110 19:22:36.835"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//div[contains(@class, 'current-flag')]</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:40.063" starttime="20161110 19:22:40.016"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:40.063" starttime="20161110 19:22:36.835"></status>
-</kw>
-<kw name="General Capture Screenshot" library="selenium_resources">
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20161110 19:22:41.197" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium_screenshots/selenium-screenshot-4.png"&gt;&lt;img src="selenium_screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20161110 19:22:41.197" starttime="20161110 19:22:40.063"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:41.197" starttime="20161110 19:22:40.063"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:41.197" starttime="20161110 19:22:26.113"></status>
-</kw>
-<kw name="General Maximize Browser Window" library="selenium_resources">
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20161110 19:22:41.218" starttime="20161110 19:22:41.197"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:41.218" starttime="20161110 19:22:41.197"></status>
-</kw>
-<kw name="Login" library="selenium_resources">
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<arguments>
-<arg>xpath=//div[@class='current-flag']/div[contains(@class, 'flag flags')]</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:41.243" starttime="20161110 19:22:41.219"></status>
-</kw>
-<kw name="Execute Javascript" library="Selenium2Library">
-<doc>Executes the given JavaScript code.</doc>
-<arguments>
-<arg>app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</arg>
-</arguments>
-<msg timestamp="20161110 19:22:41.244" level="INFO">Executing JavaScript:
-app.call("registration").loginUser("380661849888@fring.com","3af5d510d76f4e");</msg>
-<status status="PASS" endtime="20161110 19:22:41.254" starttime="20161110 19:22:41.244"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:41.254" starttime="20161110 19:22:41.219"></status>
-</kw>
-<kw name="NOTIFICATIONS Popup YES button click" library="selenium_resources">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//button[text()='Yes']</arg>
-</arguments>
-<msg timestamp="20161110 19:22:41.255" level="INFO">Clicking element 'xpath=//button[text()='Yes']'.</msg>
-<status status="PASS" endtime="20161110 19:22:41.938" starttime="20161110 19:22:41.255"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:41.938" starttime="20161110 19:22:41.255"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:41.938" starttime="20161110 19:22:26.113"></status>
-</kw>
-<kw name="Given User Is On LANDING page" library="keywords">
-<kw name="Landing Page check landing view is present" library="selenium_resources">
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<arguments>
-<arg>xpath=//*[@id='landingPageView']</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:41.976" starttime="20161110 19:22:41.939"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:41.976" starttime="20161110 19:22:41.939"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:41.976" starttime="20161110 19:22:41.939"></status>
-</kw>
-<kw name="And User clicks MENU button" library="keywords">
-<kw name="MENU button should be visible" library="selenium_resources">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="contactsListView"]/header/nav/div/button[2]</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:42.034" starttime="20161110 19:22:41.978"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:42.035" starttime="20161110 19:22:41.977"></status>
-</kw>
-<kw name="MENU button click" library="selenium_resources">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="contactsListView"]/header/nav/div/button[2]</arg>
-</arguments>
-<msg timestamp="20161110 19:22:42.035" level="INFO">Clicking button 'xpath=//*[@id="contactsListView"]/header/nav/div/button[2]'.</msg>
-<status status="PASS" endtime="20161110 19:22:42.122" starttime="20161110 19:22:42.035"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:42.122" starttime="20161110 19:22:42.035"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:42.123" starttime="20161110 19:22:41.977"></status>
-</kw>
-<kw name="And User clicks NEW GROUP Button" library="keywords">
-<kw name="MENU LIST should be visible" library="selenium_resources">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="app_actions"]/ul</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:42.158" starttime="20161110 19:22:42.124"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:42.158" starttime="20161110 19:22:42.123"></status>
-</kw>
-<kw name="MENU LIST click NEW GROUP Button" library="selenium_resources">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3s</arg>
-</arguments>
-<msg timestamp="20161110 19:22:45.167" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20161110 19:22:45.167" starttime="20161110 19:22:42.158"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="app_actions"]/ul/li[1]</arg>
-</arguments>
-<msg timestamp="20161110 19:22:45.167" level="INFO">Clicking element 'xpath=//*[@id="app_actions"]/ul/li[1]'.</msg>
-<status status="PASS" endtime="20161110 19:22:45.203" starttime="20161110 19:22:45.167"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:45.203" starttime="20161110 19:22:42.158"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:45.203" starttime="20161110 19:22:42.123"></status>
-</kw>
-<kw name="And User adds contact to the group" library="keywords">
-<kw name="First CONTACT element should be visible" library="selenium_resources">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20161110 19:22:46.205" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20161110 19:22:46.205" starttime="20161110 19:22:45.204"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/main/participants-editor/div/div[3]/div/div/ul/li[1]</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:46.245" starttime="20161110 19:22:46.205"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:46.245" starttime="20161110 19:22:45.204"></status>
-</kw>
-<kw name="First CONTACT element click" library="selenium_resources">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/main/participants-editor/div/div[3]/div/div/ul/li[1]</arg>
-</arguments>
-<msg timestamp="20161110 19:22:46.245" level="INFO">Clicking element 'xpath=//*[@id="groupChat"]/div/main[1]/main/participants-editor/div/div[3]/div/div/ul/li[1]'.</msg>
-<status status="PASS" endtime="20161110 19:22:46.276" starttime="20161110 19:22:46.245"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:46.276" starttime="20161110 19:22:46.245"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:46.276" starttime="20161110 19:22:45.204"></status>
-</kw>
-<kw name="And User click NEXT button" library="keywords">
-<kw name="NEXT Button click" library="selenium_resources">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[1]/footer/button</arg>
-</arguments>
-<msg timestamp="20161110 19:22:46.276" level="INFO">Clicking button 'xpath=//*[@id="groupChat"]/div/main[1]/footer/button'.</msg>
-<status status="PASS" endtime="20161110 19:22:46.335" starttime="20161110 19:22:46.276"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:46.335" starttime="20161110 19:22:46.276"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:46.335" starttime="20161110 19:22:46.276"></status>
-</kw>
-<kw name="And User click CREATE GROUP Button" library="keywords">
-<kw name="CREATE GROUP Button click" library="selenium_resources">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="groupChat"]/div/main[3]/footer/button</arg>
-</arguments>
-<msg timestamp="20161110 19:22:46.336" level="INFO">Clicking button 'xpath=//*[@id="groupChat"]/div/main[3]/footer/button'.</msg>
-<status status="PASS" endtime="20161110 19:22:46.402" starttime="20161110 19:22:46.336"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:46.402" starttime="20161110 19:22:46.336"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:46.403" starttime="20161110 19:22:46.335"></status>
-</kw>
-<kw name="Then User verifies PARTICIPANTS_EDITOR Screen is displayed" library="keywords">
-<kw name="PARTICIPANTS_EDITOR Screen should be visible" library="selenium_resources">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@class='content recent_contacts']</arg>
-</arguments>
-<status status="PASS" endtime="20161110 19:22:46.490" starttime="20161110 19:22:46.404"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:46.490" starttime="20161110 19:22:46.403"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:46.490" starttime="20161110 19:22:46.403"></status>
-</kw>
-<kw type="teardown" name="Teardown Test Sanity Favorites" library="keywords">
-<kw name="General Close All Browsers" library="selenium_resources">
-<kw name="Close All Browsers" library="Selenium2Library">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20161110 19:22:50.886" starttime="20161110 19:22:46.492"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:50.886" starttime="20161110 19:22:46.492"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:50.886" starttime="20161110 19:22:46.491"></status>
-</kw>
-<status status="PASS" endtime="20161110 19:22:50.887" critical="yes" starttime="20161110 19:22:26.113"></status>
-</test>
-<status status="PASS" endtime="20161110 19:22:50.889" starttime="20161110 19:21:11.437"></status>
-</suite>
-<statistics>
-<total>
-<stat fail="0" pass="4">Critical Tests</stat>
-<stat fail="0" pass="4">All Tests</stat>
-</total>
-<tag>
-</tag>
-<suite>
-<stat fail="0" id="s1" name="Sanity Group Creation" pass="4">Sanity Group Creation</stat>
-</suite>
-</statistics>
-<errors>
-</errors>
-</robot>
+<status status="PASS" endtime="20161111 15:41:41.660" starttime="20161111 15:41:41.511">
